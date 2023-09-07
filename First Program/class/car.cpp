@@ -1,27 +1,36 @@
 #include "car.h"
 #include <iostream>
 
+// static
+int car::car_count = 0;
+
 car::car()
 {
-  fuel = 0;
-  speed = 0;
-  passengers = 0;
+  ++car_count;
+  // fuel = 10;
+  // speed = 0;
+  // passengers = 0;
 }
 
-void car::FillFuel(float level)
+car::~car()
+{
+  --car_count;
+}
+
+void car::FillFuel(int level)
 {
   fuel = level;
 }
 
 void car::Accelerate()
 {
-  speed++;
-  fuel =- 0.5f;
+  ++speed;
+  fuel -= 0.5f;
 }
 
 void car::Break()
 {
-  speed = 0;
+  --speed;
 }
 
 void car::Add_People(int count)
@@ -29,10 +38,18 @@ void car::Add_People(int count)
   passengers = count;
 }
 
-void car::Dashboard()
+// member function that does not modifiy the state of the object
+// should take advantage of the const keyword
+void car::Dashboard ()const
 {
   using namespace std;
   cout << "Fuel: " << fuel << endl;
   cout << "Speed: " << speed << endl;
   cout << "Passengers: " << passengers << endl;
+}
+
+void car::showcount()
+{
+  using namespace std;
+  cout << "Car counts: " << car_count << endl;
 }
