@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "*.cuf": "FortranFreeForm",
+    "system_error": "cpp",
+    "typeinfo": "cpp",
+    "compare": "cpp"
+  }
+}

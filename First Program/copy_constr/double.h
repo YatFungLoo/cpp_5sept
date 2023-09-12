@@ -17,5 +17,5 @@ public:
   Double & operator ++();
   // post-increment operator (only works with int)
   // Double & operator ++(double);
-  Bool operator ==(const Double & obj)const;
+  // Bool operator ==(const Double & obj)const;
 };

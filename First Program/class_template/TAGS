@@ -1,0 +1,10 @@
+
+main.cpp,232
+class my_stack {my_stack3,20
+  int buffer[512];buffer4,37
+  int top{-1};top6,75
+  void Push(int elem) {Push8,98
+  void Pop() {Pop12,198
+  int Eval() {Eval15,228
+  bool IsEmpty() {IsEmpty18,271
+int main() {main23,320
